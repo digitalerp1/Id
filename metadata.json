@@ -1,0 +1,5 @@
+{
+  "name": "Pro ID Card Generator",
+  "description": "A professional tool to generate printable A4 PDF ID cards from CSV data with precise alignment and filtering capabilities.",
+  "requestFramePermissions": []
+}

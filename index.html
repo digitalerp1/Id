@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID Card Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* Print Specific Styles - CRITICAL for A4 PDF Generation */
+      @media print {
+        @page {
+          size: A4 portrait;
+          margin: 0; /* Important: Browser adds its own margins otherwise */
+        }
+        
+        body {
+          margin: 0;
+          padding: 0;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        /* Hide non-printable elements */
+        .no-print {
+          display: none !important;
+        }
+
+        /* Ensure the printable area is visible */
+        .printable-area {
+          display: block !important;
+          width: 210mm;
+          height: auto;
+        }
+      }
+
+      /* Screen Styles to verify layout */
+      @media screen {
+        .printable-area {
+          margin: 0 auto;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
